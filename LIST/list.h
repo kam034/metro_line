@@ -61,7 +61,7 @@ namespace templateClass {
         bool is_empty() { return head == nullptr; };
 
         Iterator begin() { return Iterator(this, head); };
-        Iterator end() { return Iterator(this, tail->next); };
+        Iterator end() { return Iterator(this, nullptr); };
 
         List &push_back(T val) {
             Node* p = new Node(val);
